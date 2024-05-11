@@ -216,19 +216,19 @@ span{
     }
     21%,
     40%{
-        content: "Java Developer";
+        content: "FrontEnd Developer";
     }
     41%,
     60%{
-        content: "FrontEnd Developer";
+        content: "WordPress Developer";
     }
     61%,
     80%{
-        content: "BackEnd Developer";
+        content: "FrontEnd Developer";
     }
     81%,
     100%{
-        content: "Autônoma";
+        content: "WordPress Developer";
     }
 }
 @keyframes typing{
@@ -402,6 +402,48 @@ span{
     line-height: 1.7;
     margin: auto;
 }
+
+.experience {
+    padding: 10rem 12% 10rem;
+    background-color: var(--second-bg-color);
+}
+
+.portfolio {
+    padding: 100px 15px;
+    background-color: var(--second-bg-color);
+}
+
+.portfolio .heading {
+    margin-bottom: 5rem;
+    color: white;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--main-color); /* Adicionando borda com a cor principal */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Deixe a altura se ajustar automaticamente */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
 .contact{
     background-color: var(--bg-color);
 }
@@ -427,7 +469,7 @@ span{
     width: 100%;
     padding: 2.5rem;
     font-size: 1.8rem;
-    color: var(--bg-color);
+    color: var(--main-color);
     background: var(--bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
@@ -495,4 +537,99 @@ span{
     text-align: center;
     font-size: 16px;
     color: white;
+}
+
+@media (max-width:1285px) {
+    html{
+        font-size: 55%;
+    }
+    .services-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+@media(max-width:991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+        font-size: 3.6rem;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+        font-size: 2.5rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0 ;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 56vw;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
